@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207276333649",
+    "project_id": "financiamigo-8095a",
+    "storage_bucket": "financiamigo-8095a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207276333649:android:ab6608f86425b359bc3670",
+        "android_client_info": {
+          "package_name": "com.example.financiamigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207276333649-tn18hi3qj1pup4n228q4fn6gp5b4gbpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB15IpWyAAReMB8v50q315Exz6kR5ZKFE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207276333649-tn18hi3qj1pup4n228q4fn6gp5b4gbpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

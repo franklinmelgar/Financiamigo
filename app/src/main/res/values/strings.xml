@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Financiamigo</string>
+
+    <!--Login-->
+    <string name="login_header">Iniciar Sesión</string>
+    <string name="login_welcome">Bienvenido</string>
+    <string name="login_message">Por favor iniciar sesión</string>
+    <string name="login_email">Correo Electrónico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_remember">Recordar usuario</string>
+    <string name="login_forgotpassword">¿Olvido su contraseña?</string>
+    <string name="login_btn">Iniciar Sesión</string>
+    <string name="login_new_user">¿Usuario nuevo? Regístrate</string>
+
+    <!--Register-->
+    <string name="register_welcome">Bienvenido</string>
+    <string name="register_header">Regístrate</string>
+    <string name="register_message">Crea tu nueva cuenta</string>
+</resources>
