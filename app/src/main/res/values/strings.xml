@@ -10,10 +10,20 @@
     <string name="login_remember">Recordar usuario</string>
     <string name="login_forgotpassword">¿Olvido su contraseña?</string>
     <string name="login_btn">Iniciar Sesión</string>
-    <string name="login_new_user">¿Usuario nuevo? Regístrate</string>
+    <string name="login_new_user">¿Usuario nuevo?</string>
+    <string name="login_new_register">   Registrate</string>
 
     <!--Register-->
     <string name="register_welcome">Bienvenido</string>
     <string name="register_header">Regístrate</string>
     <string name="register_message">Crea tu nueva cuenta</string>
+    <string name="register_btn">Registrar</string>
+
+
+    <!-- -->
+    <string name="forgot_header">¿Olvidaste tu contraseña?</string>
+    <string name="forgot_welcome">Bienvenido</string>
+    <string name="forgot_message">Por favor coloca tu correo electrónico</string>
+    <string name="forgot_btn">Enviar Correo</string>
+
 </resources>
