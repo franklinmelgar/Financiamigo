@@ -19,11 +19,19 @@
     <string name="register_message">Crea tu nueva cuenta</string>
     <string name="register_btn">Registrar</string>
 
-
-    <!-- -->
+    <!-- Forgot Password -->
     <string name="forgot_header">¿Olvidaste tu contraseña?</string>
     <string name="forgot_welcome">Bienvenido</string>
     <string name="forgot_message">Por favor coloca tu correo electrónico</string>
     <string name="forgot_btn">Enviar Correo</string>
+
+    <!-- Menu -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_walet">Billetera</string>
+    <string name="menu_addressbook">Contactos</string>
+    <string name="menu_setings">Configuracion</string>
+    <string name="menu_add">Agregar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

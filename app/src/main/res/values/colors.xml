@@ -11,6 +11,9 @@
     <color name="bg_color">#1565C0</color>
     <color name="text_color">#F5F5F5</color>
     <color name="login_btn">#F9A825</color>
+    <color name="btn_floating">#D84315</color>
+    <color name="empty_bg_color">#D2D2D2</color>
+
 
 
 </resources>
