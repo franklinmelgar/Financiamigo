@@ -1,8 +1,8 @@
 package com.example.financiamigo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -16,9 +16,11 @@ class SplashActivity : AppCompatActivity() {
         firebaseauth = Firebase.auth
         authlistener = FirebaseAuth.AuthStateListener {
             val currentUser = firebaseauth.currentUser
+            val id = firebaseauth.currentUser?.uid
 
             if (currentUser != null){
                 val mainActivity = Intent(this, MainActivity::class.java)
+                mainActivity.putExtra("id", id);
                 startActivity(mainActivity)
             }else{
                 val mainActivity = Intent(this, LoginActivity::class.java)

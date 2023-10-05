@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalletFragment"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_title"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:background="@color/bg_color"
+        android:textColor="@color/text_color"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_general"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="@color/text_color_gray"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        ></TextView>
+
+    <RelativeLayout
+        android:id="@+id/lblcategorias"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_category"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_categorias_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lblNotificaciones"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_notification"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_notificaciones_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_cuenta"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:textColor="@color/text_color_gray"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        ></TextView>
+
+    <RelativeLayout
+        android:id="@+id/lblContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/iconAccount"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_password"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_cambiarcontrasena_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lblEliminarCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_eliminarcuenta_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+    </RelativeLayout>
+</LinearLayout>

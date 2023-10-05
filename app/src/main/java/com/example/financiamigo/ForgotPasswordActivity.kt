@@ -1,10 +1,12 @@
 package com.example.financiamigo
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -17,8 +19,14 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         val btnEnviarCorreo: Button = findViewById(R.id.btEnviarCorreo)
         val txtCorreo: EditText = findViewById(R.id.txtCorreoElectronico)
+        val lblLogin: TextView = findViewById(R.id.lblIniciarSesion)
 
         firebaseauth = Firebase.auth
+
+        lblLogin.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         btnEnviarCorreo.setOnClickListener{
             if (txtCorreo.text.isNotEmpty()){
@@ -29,6 +37,10 @@ class ForgotPasswordActivity : AppCompatActivity() {
                     {
                         Toast.makeText(this, "Error al enviar electronico enviado", Toast.LENGTH_LONG).show()
                     }
+                }
+            }else{
+                if (txtCorreo.text.isEmpty()){
+                    txtCorreo.setError("Correo Electronico Requerido")
                 }
             }
         }

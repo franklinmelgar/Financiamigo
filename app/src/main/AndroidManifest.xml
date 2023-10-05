@@ -13,10 +13,14 @@
         android:theme="@style/Theme.Financiamigo"
         tools:targetApi="31">
         <activity
+            android:name=".InitialActivity"
+            android:exported="false"
+            android:label="@string/title_activity_initial"
+            android:theme="@style/Theme.Financiamigo" />
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true"
-            android:theme="@style/Pantallas"
-            />
+            android:theme="@style/Pantallas" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true"

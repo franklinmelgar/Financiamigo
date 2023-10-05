@@ -8,12 +8,12 @@
         ></item>
 
     <item
-        android:id="@+id/walet"
+        android:id="@+id/wallet"
         android:title="@string/menu_walet"
         android:icon="@drawable/ic_walet"></item>
 
     <item
-        android:id="@+id/holder"
+        android:id="@+id/add"
         android:title="Agregar"
         android:icon="@drawable/ic_add2"
         ></item>
@@ -24,7 +24,7 @@
         android:icon="@drawable/ic_person"></item>
 
     <item
-        android:id="@+id/setting"
+        android:id="@+id/settings"
         android:title="@string/menu_setings"
         android:icon="@drawable/ic_settings"></item>
 

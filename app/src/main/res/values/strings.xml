@@ -1,28 +1,34 @@
 <resources>
     <string name="app_name">Financiamigo</string>
+    <string name="app_name1">FINANCI</string>
+    <string name="app_name2">AMIGO</string>
 
     <!--Login-->
     <string name="login_header">Iniciar Sesión</string>
-    <string name="login_welcome">Bienvenido</string>
-    <string name="login_message">Por favor iniciar sesión</string>
+    <string name="login_welcome">Bienvenido a tu Financiamigo en linea</string>
+    <string name="login_message">Por favor iniciar sesión con tu cuenta de financiamigo para conocer todas las opciones que creamos para ti.</string>
     <string name="login_email">Correo Electrónico</string>
     <string name="login_password">Contraseña</string>
     <string name="login_remember">Recordar usuario</string>
     <string name="login_forgotpassword">¿Olvido su contraseña?</string>
     <string name="login_btn">Iniciar Sesión</string>
-    <string name="login_new_user">¿Usuario nuevo?</string>
-    <string name="login_new_register">   Registrate</string>
+    <string name="login_new_user">¿No tienes una cuenta?</string>
+    <string name="login_new_register">Registrate</string>
+    <string name="login_star">*</string>
 
     <!--Register-->
     <string name="register_welcome">Bienvenido</string>
     <string name="register_header">Regístrate</string>
-    <string name="register_message">Crea tu nueva cuenta</string>
+    <string name="register_message">Crea tu nueva cuenta para conocer todas las opciones que Financiamigo tiene para ti.</string>
     <string name="register_btn">Registrar</string>
+    <string name="register_login">¿Ya tienes una cuenta?</string>
+    <string name="register_login2">Iniciar Sesión</string>
+
 
     <!-- Forgot Password -->
     <string name="forgot_header">¿Olvidaste tu contraseña?</string>
     <string name="forgot_welcome">Bienvenido</string>
-    <string name="forgot_message">Por favor coloca tu correo electrónico</string>
+    <string name="forgot_message">Podemos ayudarte a cambiar tu contraseña por medio de tu correo electrónico enlazado a una cuenta de Financiamigo</string>
     <string name="forgot_btn">Enviar Correo</string>
 
     <!-- Menu -->
@@ -33,5 +39,30 @@
     <string name="menu_add">Agregar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_initial">InitialActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Wallet -->
+    <string name="wallet_title">Cuentas</string>
+    <string name="wallet_total_mount">Saldo Total</string>
+
+    <!-- Settings -->
+    <string name="setting_title">Configuraciones</string>
+    <string name="setting_general">General</string>
+    <string name="setting_cuenta_item">Cuenta</string>
+    <string name="setting_categorias_item">Categorias</string>
+    <string name="setting_notificaciones_item">Notificaciones</string>
+    <string name="setting_cuenta">Cuenta</string>
+    <string name="setting_cambiarcontrasena_item">Cambiar Contraseña</string>
+    <string name="setting_eliminarcuenta_item">Eliminar Cuenta</string>
+
+
+    <string name="lorem_ipsum">Previous</string>
+    <string name="title_activity_categories">CategoriesActivity</string>
+
 
 </resources>

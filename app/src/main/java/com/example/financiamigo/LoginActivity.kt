@@ -1,12 +1,12 @@
 package com.example.financiamigo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -38,10 +38,20 @@ class LoginActivity : AppCompatActivity() {
                         val mainActivity = Intent(this, MainActivity::class.java)
                         startActivity(mainActivity)
                     }else{
-                        Toast.makeText(this, "Usuaio y contraseña incorrectos", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Usuario y contraseña incorrectos", Toast.LENGTH_LONG).show()
                     }
                 }
+            }else{
+
+                if (txtCorreo.text.isEmpty()){
+                    txtCorreo.setError("Correo Electronico Requerido")
+                }
+
+                if (txtcontra.text.isEmpty()) {
+                    txtcontra.setError("Contraseña Requerida")
+                }
             }
+
         }
 
         olvidoContrasena.setOnClickListener{

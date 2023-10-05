@@ -8,11 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>-->
 
-    <color name="bg_color">#1565C0</color>
+    <color name="bg_color2">#1565C0</color>
+
+    <color name="bg_color">#14539a</color>
+
     <color name="text_color">#F5F5F5</color>
     <color name="login_btn">#F9A825</color>
     <color name="btn_floating">#D84315</color>
     <color name="empty_bg_color">#D2D2D2</color>
+    <color name="bg_red">#B71C1C</color>
+    <color name="text_color_gray">#546E7A</color>
 
 
 
