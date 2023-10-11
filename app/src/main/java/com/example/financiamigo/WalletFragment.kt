@@ -1,21 +1,27 @@
 package com.example.financiamigo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [WalletFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+private lateinit var btnAgregar: FloatingActionButton
+private lateinit var listadoCuentas: ListView
+private lateinit var grandTotal: TextView
+private lateinit var firebaseauth: FirebaseAuth
+
 class WalletFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -33,20 +39,50 @@ class WalletFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_wallet, container, false)
+
+        var view = inflater.inflate(R.layout.fragment_wallet, container, false)
+
+        btnAgregar = view.findViewById(R.id.fabAdd)
+        btnAgregar.setOnClickListener{
+            val accountActivity = Intent(activity, AccountActivity::class.java)
+            startActivity(accountActivity)
+        }
+
+        listadoCuentas = view.findViewById(R.id.listadoCuenta)
+
+        grandTotal = view.findViewById(R.id.grandTotal)
+
+        var listaCuentas = mutableListOf<Cuenta>()
+        var conteo: Int = 0
+
+        firebaseauth = Firebase.auth
+
+        val bd = Firebase.firestore
+        bd.collection("Cuentas")
+            .whereEqualTo("Usuario_ID", firebaseauth.currentUser?.uid.toString())
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    conteo += document.getString("Saldo")?.toInt() ?: 0
+                    val cuenta = Cuenta(document.getString("Nombre") ?: "", document.getString("Descripcion") ?: "", document.getString("Numero_Cuenta") ?: "", document.getString("Nombre_Banco") ?: "", document.getString("Tipo_Cuenta") ?: "", document.getString("Fecha") ?: "", document.getString("Saldo") ?: "", document.getString("Usuario_ID") ?: "")
+                    listaCuentas.add(cuenta)
+                }
+
+                grandTotal.text = "Lps. $conteo"
+
+                val adapter = context?.let { CuentaAdapter(it, listaCuentas) }
+
+                listadoCuentas.adapter = adapter
+
+            }
+            .addOnFailureListener { e ->
+                //Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
+            }
+
+        return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment WalletFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             WalletFragment().apply {

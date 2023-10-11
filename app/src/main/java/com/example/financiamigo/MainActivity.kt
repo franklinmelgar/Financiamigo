@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        this.actionBar?.hide()
+        getSupportActionBar()?.hide()
+
         val userId = intent.getStringExtra("id")
 
         loadFragment(HomeFragment(), userId.toString());

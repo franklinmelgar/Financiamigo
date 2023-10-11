@@ -1,53 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WalletFragment"
-    android:orientation="vertical"
+    android:background="@color/bg_area"
     >
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_title"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:background="@color/bg_color"
+            android:textColor="@color/text_color"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_total_mount"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/grandTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            ></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listadoCuenta"
+            android:padding="15dp"
+            android:dividerHeight="10dp"
+            android:layout_marginTop="20dp"
+            >
+        </ListView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/wallet_title"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:background="@color/bg_color"
-        android:textColor="@color/text_color"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        ></TextView>
+        android:src="@drawable/ic_add"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="80dp"
+        >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wallet_total_mount"
-        android:textSize="18dp"
-        android:gravity="center"
-        android:textColor="@color/text_color_gray"
-        android:paddingTop="20dp"
-        android:textStyle="bold"
-        ></TextView>
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textColor="@color/text_color_gray"
-        android:paddingBottom="10dp"
-        android:textStyle="bold"
-        ></TextView>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
-
-
-</LinearLayout>
+</RelativeLayout>

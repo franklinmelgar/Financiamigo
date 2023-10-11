@@ -12,10 +12,11 @@
     </style>
 
     <style name="Theme.MainMenu" parent="Theme.MaterialComponents">
+
         <!-- color cuando se seleccionar el icono -->
         <item name="colorPrimary">@color/text_color</item>
 
-        <!-- <item name="colorPrimaryVariant">@color/text_color</item> -->
+        <item name="colorPrimaryVariant">@color/text_color</item>
 
         <!-- color del boton flotante -->
         <item name="colorSecondary">@color/btn_floating</item>
@@ -23,12 +24,14 @@
         <!-- color del texto del boton flotante -->
         <item name="colorOnSecondary">@color/text_color</item>
 
+        <item name="android:statusBarColor">@color/bg_color</item>
 
         <!-- color de la barra -->
         <item name="colorSurface">@color/bg_color</item>
 
 
     </style>
+
     <!-- Base application theme. -->
     <style name="Base.Theme.Financiamigo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
