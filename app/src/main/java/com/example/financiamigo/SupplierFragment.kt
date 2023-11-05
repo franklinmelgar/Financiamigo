@@ -4,15 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
+private lateinit var listaProveedores: ListView
+private lateinit var firebaseauth: FirebaseAuth
+private lateinit var txtBuscar: EditText
+
 class SupplierFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -31,18 +39,38 @@ class SupplierFragment : Fragment() {
 
         var view = inflater.inflate(R.layout.fragment_suppliers, container, false)
 
+        listaProveedores = view.findViewById(R.id.listadoProveedores)
+        txtBuscar = view.findViewById(R.id.txtBuscar)
+
+        obtenerSuplidores(listaProveedores)
+
         return view
     }
 
-    companion object {
+    private fun obtenerSuplidores(listaProveedores: ListView){
+        var listaContactos = mutableListOf<Contacto>()
 
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SupplierFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        firebaseauth = Firebase.auth
+
+        val bd = Firebase.firestore
+
+        bd.collection("Contactos")
+            .whereEqualTo("Usuario_ID", firebaseauth.currentUser?.uid.toString())
+            .whereEqualTo("Tipo", "Proveedor")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    val contacto = Contacto(document.getString("Tipo") ?: "", document.getString("Nombre") ?: "", document.getString("Apellido") ?: "", document.getString("Empresa") ?: "", document.getString("Telefono") ?: "", document.getString("Celular") ?: "", document.getString("Correo") ?: "", document.getString("Direccion") ?: "", document.getString("Usuario_ID") ?: "")
+                    listaContactos.add(contacto)
                 }
+
+                val adapter = context?.let { ContactoAdapter(it, listaContactos) }
+
+                listaProveedores.adapter = adapter
+
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(context, e.message.toString(), Toast.LENGTH_LONG).show()
             }
     }
 }

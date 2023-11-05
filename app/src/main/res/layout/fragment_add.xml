@@ -1,18 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFragment">
+    tools:context=".AddFragment"
+    android:background="@color/bg_area"
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Add"
-        android:textSize="50dp"
-        android:textColor="@color/bg_color"
-        />
+        android:orientation="horizontal"
+        >
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/add_title"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:background="@color/bg_color"
+            android:textColor="@color/text_color"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/btRegregar"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_report">
+
+        </ImageView>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/bg_color"
+        >
+
+        <ImageView
+            android:id="@+id/disminuirMes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_left_arrow"
+            android:backgroundTint="@color/text_color"
+            android:layout_gravity="center_vertical"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/meseslista"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            />
+
+        <ImageView
+            android:id="@+id/aumentarMes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_right_arrow"
+            android:backgroundTint="@color/text_color"
+            android:layout_gravity="center_vertical"
+             />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/bg_color"
+
+        >
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="5dp"
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/balance"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/add_month_in"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/add_month_out"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_color"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/ingresos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:textSize="20dp"
+                        android:textColor="@color/text_color"
+                        >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_arrow_up"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+
+                        ></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/gastos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:textSize="20dp"
+                        android:textColor="@color/text_color"
+                        >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_arrow_down"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        ></ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btnAgregarTransaccion"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_button_login"
+        android:text="@string/add_month_bt"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        >
+
+    </TextView>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/add_month_detail_title"
+        android:textStyle="bold"
+        ></TextView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <ListView
+            android:id="@+id/listadoTransacciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="invisible"
+            ></ListView>
+
+        <ImageView
+            android:id="@+id/iconoNoTransacciones"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_notransactions"
+            android:layout_centerInParent="true"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/TextoNoTransacciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin transacciones"
+            android:layout_below="@+id/iconoNoTransacciones"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"
+            ></TextView>
+
+    </RelativeLayout>
+
+
+
+    
+
+</LinearLayout>

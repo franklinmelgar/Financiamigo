@@ -6,9 +6,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tarjeta"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="145dp"
     android:layout_gravity="center"
-    app:cardCornerRadius="25dp"
+    app:cardCornerRadius="10dp"
     android:layout_margin="15dp"
     android:elevation="10dp"
     android:theme="@style/Theme.Financiamigo"
@@ -27,15 +27,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <ImageView
                 android:id="@+id/icono"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/item_circle_blue"
                 android:padding="15dp"
-                android:src="@drawable/ic_walet"></ImageView>
+                android:src="@drawable/ic_walet"
+                ></ImageView>
 
             <TextView
                 android:id="@+id/NombreCuenta"
@@ -44,7 +46,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="15dp"
                 android:layout_toEndOf="@+id/icono"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="22dp"
                 android:text="Prueba"
                 android:textSize="20dp"
                 android:fontFamily="sans-serif-condensed-medium"
@@ -57,10 +59,10 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="15dp"
                 android:layout_toEndOf="@+id/icono"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="48dp"
                 android:text="Descripcion"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:textSize="18dp"
+                android:textSize="14dp"
                 ></TextView>
 
             <ImageView
@@ -68,7 +70,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_forward"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="15dp"
                 ></ImageView>
 
@@ -96,8 +98,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Saldo:"
                 android:textSize="20dp"></TextView>
@@ -107,8 +109,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:textSize="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="1500"></TextView>

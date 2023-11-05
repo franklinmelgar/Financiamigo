@@ -8,19 +8,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ABFragment"
     android:orientation="vertical"
+    android:background="@color/bg_area"
     >
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ab_title"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:background="@color/bg_color"
-        android:textColor="@color/text_color"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        ></TextView>
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ab_title"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:background="@color/bg_color"
+            android:textColor="@color/text_color"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/addContact"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_add2"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp"
+            ></ImageView>
+
+    </RelativeLayout>
+
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -53,6 +74,8 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/bg_area"
         >
 
     </androidx.viewpager.widget.ViewPager>

@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         btnIniiarSesion.setOnClickListener{
             if (txtCorreo.text.isNotEmpty() && txtcontra.text.isNotEmpty()){
-                firebaseauth.signInWithEmailAndPassword(txtCorreo.text.toString(), txtCorreo.text.toString()).addOnCompleteListener{
+                firebaseauth.signInWithEmailAndPassword(txtCorreo.text.toString(), txtcontra.text.toString()).addOnCompleteListener{
                     if (it.isSuccessful){
                         val mainActivity = Intent(this, MainActivity::class.java)
                         startActivity(mainActivity)

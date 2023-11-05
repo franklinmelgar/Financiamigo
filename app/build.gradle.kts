@@ -21,6 +21,10 @@ android {
         }
     }
 
+/*    buildFeatures{
+        viewBinding = true
+    }*/
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -56,6 +60,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
@@ -70,6 +75,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     implementation("com.google.firebase:firebase-database-ktx:20.2.2")
+    implementation("androidx.test:core-ktx:1.5.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -80,4 +86,7 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0-alpha02")
     implementation("androidx.activity:activity-ktx:1.8.0-alpha06")
     implementation("androidx.fragment:fragment-ktx:1.2.5")
+    implementation ("androidx.camera:camera-camera2:1.0.0")
+    implementation("com.squareup.picasso:picasso:2.5.2")
+
 }

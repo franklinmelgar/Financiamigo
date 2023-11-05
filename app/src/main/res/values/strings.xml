@@ -43,11 +43,15 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-     Strings used for fragments for navigation
+    Strings used for fragments for navigation
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <!-- Home -->
+    <string name="home_title">Dashboard</string>
+
 
     <!-- Wallet -->
     <string name="wallet_title">Cuentas</string>
@@ -64,20 +68,69 @@
 
     <!-- AB -->
     <string name="ab_title">Contactos</string>
+    <string name="ab_supplier_list_tile">Todos los proveedores</string>
+    <string name="ab_customer_list_tile">Todos los clientes</string>
     <string name="ab_tabproveedores">Proveedores</string>
     <string name="ab_tabclientes">Clientes</string>
+    <string name="ab_add_tile">Agregar nuevo contacto</string>
+    <string name="ab_add_name">Nombre</string>
+    <string name="ab_add_lastname">Apellido</string>
+    <string name="ab_add_company">Nombre de empresa</string>
+    <string name="ab_add_phone">Telefono</string>
+    <string name="ab_add_cell">Celular</string>
+    <string name="ab_add_email">Correo Electronico</string>
+    <string name="ab_add_type">Tipo de contacto</string>
+    <string name="ab_add_address">Direccion</string>
+    <string name="ab_add_paymentterm">Termino de credito</string>
 
-
+    <!-- Add -->
+    <string name="add_title">Transacciones</string>
+    <string name="add_month_netbalance">Balance del mes</string>
+    <string name="add_month_in">Ingresos</string>
+    <string name="add_month_out">Gastos</string>
+    <string name="add_month_detail_title">Historial</string>
+    <string name="add_month_bt">Agregar nueva transaccion</string>
+    <string name="add_transaction_title">Nueva transaccion</string>
+    <string name="add_transaction_name">Titulo</string>
+    <string name="add_transaction_type">Tipo</string>
+    <string name="add_transaction_account">Cuenta</string>
+    <string name="add_transaction_ab">Contacto</string>
+    <string name="add_transaction_amount">Monto</string>
+    <string name="add_transaction_category">Categoria</string>
+    <string name="add_transaction_date">Fecha</string>
+    <string name="add_transaction_comment">Comentario</string>
+    <string name="add_transaction_term">Termino</string>
+    <string name="add_transaction_button">Agregar Transaccion</string>
+    <string name="add_transaction_buttonPhoto">Cargar Imagen</string>
+    <string name="detail_transaction_title">Detalle transacciones</string>
 
     <!-- Settings -->
     <string name="setting_title">Configuraciones</string>
     <string name="setting_general">General</string>
     <string name="setting_cuenta_item">Cuenta</string>
     <string name="setting_categorias_item">Categorias</string>
+    <string name="setting_paymentterm_item">Terminos de credito</string>
     <string name="setting_notificaciones_item">Notificaciones</string>
     <string name="setting_cuenta">Cuenta</string>
     <string name="setting_cambiarcontrasena_item">Cambiar Contraseña</string>
     <string name="setting_eliminarcuenta_item">Eliminar Cuenta</string>
+    <string name="setting_cerrarsesion_item">Cerrar Sesion</string>
+
+    <!-- Payment Term -->
+    <string name="payment_term_title">Termino de credito</string>
+    <string name="add_payment_term_name">Nombre de termino de credito</string>
+    <string name="add_payment_term_count">Cantidad de dias</string>
+    <string name="add_payment_term_button">Agregar termno de credito</string>
+    <string name="payment_term_list_title">Listado de terminos de credito</string>
+
+    <!-- Category -->
+    <string name="category_title">Categorias</string>
+    <string name="add_category_title">Agregar Categoria</string>
+    <string name="add_category_name">Nombre de Categoria</string>
+    <string name="add_category_icon">Icono de Categoria</string>
+    <string name="add_category_color">Color de Categoria</string>
+    <string name="add_category_button">Agregar Nueva Categoria</string>
+    <string name="category_list_title">Listado de categorias</string>
 
 
     <string name="lorem_ipsum">Previous</string>

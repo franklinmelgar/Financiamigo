@@ -7,20 +7,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WalletFragment"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/setting_title"
-        android:textSize="25dp"
+        android:textSize="22dp"
         android:gravity="center"
         android:background="@color/bg_color"
         android:textColor="@color/text_color"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_userprofile"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Franklin Melgar"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_gray"
+            ></TextView>
+
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -35,6 +64,57 @@
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed-medium"
         ></TextView>
+
+    <RelativeLayout
+        android:id="@+id/lblterminocredito"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_paymentterm_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/lblcategorias"
@@ -201,6 +281,7 @@
             ></ImageView>
 
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/lblEliminarCuenta"
         android:layout_width="match_parent"
@@ -250,4 +331,55 @@
             ></ImageView>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lblCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_logout"
+                android:layout_alignParentLeft="true"
+                android:foregroundGravity="center"
+                >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/setting_cerrarsesion_item"
+                android:textColor="@color/text_color_gray"
+                android:fontFamily="sans-serif-condensed-medium"
+                ></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_forward"
+            ></ImageView>
+
+    </RelativeLayout>
+
 </LinearLayout>

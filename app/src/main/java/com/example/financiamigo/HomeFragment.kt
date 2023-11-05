@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 
@@ -24,9 +23,9 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val texto: TextView = view.findViewById(R.id.inicio)
+        //val texto: TextView = view.findViewById(R.id.inicio)
 
-        texto.text = arguments?.getString("idUser")
+        //texto.text = arguments?.getString("idUser")
 
         return view
 

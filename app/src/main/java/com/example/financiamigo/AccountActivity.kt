@@ -1,17 +1,22 @@
 package com.example.financiamigo
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 
 class AccountActivity : AppCompatActivity() {
@@ -23,10 +28,11 @@ class AccountActivity : AppCompatActivity() {
     private lateinit var txtNumeroCuenta: EditText
     private lateinit var txtBanco: EditText
     private lateinit var cmbTipo: Spinner
-    private lateinit var txtFecha: EditText
+    private lateinit var txtFecha: TextView
     private lateinit var txtSaldo: EditText
     private lateinit var btGuardar: Button
     private lateinit var firebaseauth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +48,24 @@ class AccountActivity : AppCompatActivity() {
         txtFecha = findViewById(R.id.txtFecha)
         txtSaldo = findViewById(R.id.txtSaldo)
         btGuardar = findViewById(R.id.btGuardar)
+
+        val myCalendar = Calendar.getInstance()
+        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            myCalendar.set(Calendar.YEAR, year)
+            myCalendar.set(Calendar.MONTH, monthOfYear)
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            val myFormat = "dd/MM/yyyy" //En el cual deseas mostrar
+            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            txtFecha.text = sdf.format(myCalendar.time)
+        }
+
+        txtFecha.setOnClickListener {
+            DatePickerDialog(this, dateSetListener,
+                myCalendar.get(Calendar.YEAR),
+                myCalendar.get(Calendar.MONTH),
+                myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
 
         val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, tiposCuenta)
 
@@ -130,7 +154,6 @@ class AccountActivity : AppCompatActivity() {
         txtDescripcionCuenta.text.clear()
         txtNumeroCuenta.text.clear()
         txtBanco.text.clear()
-        txtFecha.text.clear()
         txtSaldo.text.clear()
     }
 

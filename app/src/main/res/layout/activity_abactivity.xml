@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/titulo"
+        >
+
+        <ImageView
+            android:id="@+id/btRegregar"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_back"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ab_add_tile"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:background="@color/bg_color"
+            android:textColor="@color/text_color"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            ></TextView>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titulo"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ab_add_type"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    android:alpha="0.7"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/cmbTipo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_textbox_form"
+                android:spinnerMode="dialog"
+                >
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_name"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_textbox_form"
+                android:inputType="textCapWords"
+                android:paddingLeft="10dp"></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_lastname"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtApellido"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapWords"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_company"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtEmpresa"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapWords"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_phone"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="phone"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_cell"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtCelular"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="phone"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_email"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtCorreo"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_paymentterm"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/cmbTermino"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_textbox_form"
+                android:spinnerMode="dialog"
+                >
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/ab_add_address"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="80dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+
+            <Button
+                android:id="@+id/btGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_button_screen"
+                android:text="@string/add_wallet_btnSave"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginBottom="20dp"
+
+                ></Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

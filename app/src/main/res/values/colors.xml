@@ -10,6 +10,19 @@
     <color name="yellow">#FBC02D</color>
     <color name="pink">#E91E63</color>
     <color name="green">#388E3C</color>
+    <color name="blue">#1565C0</color>
+
+    <color name="purple">#512DA8</color>
+    <color name="brown">#5D4037</color>
+    <color name="blue_grey">#455A64</color>
+    <color name="red">#FF1744</color>
+    <color name="indigo">#3949AB</color>
+    <color name="lime">#AFB42B</color>
+
+
+
+
+
 
     <color name="bg_area">#EEEEEE</color>
     <color name="bg_color2">#1565C0</color>
@@ -20,6 +33,11 @@
     <color name="empty_bg_color">#D2D2D2</color>
     <color name="bg_red">#B71C1C</color>
     <color name="text_color_gray">#546E7A</color>
+    <color name="icono_categoria">#263238</color>
+
+    <!-- ic_cat_color -->
+
+
 
 
 

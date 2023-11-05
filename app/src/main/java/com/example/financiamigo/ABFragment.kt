@@ -1,17 +1,16 @@
 package com.example.financiamigo
 
 import PageAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabItem
 import com.google.android.material.tabs.TabLayout
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
@@ -22,8 +21,7 @@ class ABFragment : Fragment() {
 
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPagerContenedor: ViewPager
-    private lateinit var tabItemProveedores: TabItem
-    private lateinit var tabItemClientes: TabItem
+    private lateinit var addContact: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +41,13 @@ class ABFragment : Fragment() {
 
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPagerContenedor = view.findViewById(R.id.viewPager)
+        addContact = view.findViewById(R.id.addContact)
+
+        addContact.setOnClickListener{
+            val ContactActivity = Intent(activity, ABActivity::class.java)
+            startActivity(ContactActivity)
+        }
+
 
         viewPagerContenedor.adapter = PageAdapter(childFragmentManager)
 

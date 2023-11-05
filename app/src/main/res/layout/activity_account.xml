@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/add_wallet_title"
-            android:textSize="25dp"
+            android:textSize="22dp"
             android:gravity="center"
             android:background="@color/bg_color"
             android:textColor="@color/text_color"
@@ -38,288 +38,315 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/titulo"
-        android:orientation="vertical"
-        android:paddingTop="30dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             >
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_name"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_name"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtNombreCuenta"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_description"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtDescripcionCuenta"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="textMultiLine"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="80dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_number"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtNumeroCuenta"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_bank"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtBanco"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="text"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_type"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/cmbTipo"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:spinnerMode="dialog"
+                >
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_date"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="date"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                ></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/add_wallet_balance"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@android:color/background_dark"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/login_star"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/bg_red"
+                    android:paddingLeft="5dp"
+                    ></TextView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtSaldo"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/round_textbox_form"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                ></EditText>
+
+            <Button
+                android:id="@+id/btGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/round_button_screen"
+                android:text="@string/add_wallet_btnSave"
+                android:textColor="@color/text_color"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
+                ></Button>
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/txtNombreCuenta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="text"
-            ></EditText>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_description"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtDescripcionCuenta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="textMultiLine"
-            ></EditText>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_number"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtNumeroCuenta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="text"
-            ></EditText>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_bank"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtBanco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="text"
-            ></EditText>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_type"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <Spinner
-            android:id="@+id/cmbTipo"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginBottom="25dp"
-            android:layout_marginTop="10dp"
-            >
-        </Spinner>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_date"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtFecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="date"
-            ></EditText>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/add_wallet_balance"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                ></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="@string/login_star"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:textColor="@color/bg_red"
-                android:paddingLeft="5dp"
-                ></TextView>
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtSaldo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:inputType="numberDecimal"
-            ></EditText>
-
-        <Button
-            android:id="@+id/btGuardar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@drawable/round_button_screen"
-            android:text="@string/add_wallet_btnSave"
-            android:textColor="@color/text_color"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            ></Button>
-
-    </LinearLayout>
 
 </RelativeLayout>
